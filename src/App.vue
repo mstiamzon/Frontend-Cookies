@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app  id="inspire">
+    <!-- <div id="nav">
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/about">About</router-link>
+      <router-link to="/login">Login</router-link>
+       <router-link to="/register">Register</router-link>
+    </div> -->
+
+
+    <!-- <v-app-bar
+      app
+      clipped-left
+      color="amber"
+    >
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <span class="title ml-3 mr-5">Cookies&nbsp;<span class="font-weight-light">in the Skye</span></span>
+      <v-text-field
+        solo-inverted
+        flat
+        hide-details
+        label="Search"
+        prepend-inner-icon="search"
+      ></v-text-field>
+      <v-spacer></v-spacer>
+    </v-app-bar> -->
+  
+    <router-view/>
+
+  </v-app>
 </template>
 
+<style lang="scss">
+
+
+ </style>
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  data () {
+      return {
+      search:'',
+   
+      }
+    },
+   
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
