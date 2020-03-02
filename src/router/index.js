@@ -3,10 +3,48 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/SignUp.vue'
-import About from '../views/About.vue'
+import Sidebar from '../views/Sidebar.vue'
+import UsersView from '../views/UsersView.vue'
+import RolesView from '../views/RolesView.vue'
+import ErrorView from '../views/ErrorView.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
+
+  //Sidebar Route
+  {
+    path: '/auth',
+    name: '',
+    component: Sidebar,
+    children:
+   [
+     {
+    path:'/users',
+    name:'users',
+     component:UsersView
+     },
+    {
+      path:'/roles',
+      name:'roles',
+       component:RolesView
+     },
+      
+     {
+      path:'/register',
+      name:'Register',
+       component:Register
+       },
+    ]
+  },
+ 
+   //Others
+   {
+    path: '/',
+    name: 'Home',
+    component: Home
+   
+  },
   {
     path: '/login',
     name: 'login',
@@ -17,24 +55,14 @@ const routes = [
     name: 'register',
     component: Register
   },
-  {
-    path: '/home',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-
-    component: About
-    
-  },
+ 
+   //Error Route
+    {
+    path:'*',
+    name: 'Error',
+    component: ErrorView
+    }
   
-
 ]
 
 const router = new VueRouter({

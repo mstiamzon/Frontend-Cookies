@@ -78,7 +78,7 @@
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
             <v-list-item-content>
-              <v-list-item-title class="grey--text">
+              <v-list-item-title class="grey--text" @click="$router.push(item.goto)">
                 {{ item.text }}
               </v-list-item-title>
             </v-list-item-content>
@@ -86,7 +86,11 @@
         </template>
       </v-list>
     </v-navigation-drawer>
-
+   <v-content>
+      <v-container fluid>
+        <router-view></router-view>
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 
@@ -97,20 +101,19 @@ export default {
        drawer: null,
        search:'',
       items: [
-      { icon: 'lightbulb_outline', text: 'Notes' },
-      { icon: 'touch_app', text: 'Reminders' },
+      { icon: 'lightbulb_outline', text: 'Notes' , goto: ''},
+      { icon: 'touch_app', text: 'Reminders' , goto: ''},
       { divider: true },
-      { heading: 'Labels' },
-      { icon: 'add', text: 'Create new label' },
-      { divider: true },
-      { icon: 'archive', text: 'Users'},
-      { icon: 'delete', text: 'Trash' },
-      { divider: true },
-      { icon: 'settings', text: 'Settings' },
-      { icon: 'chat_bubble', text: 'Trash' },
-      { icon: 'help', text: 'Help' },
-      { icon: 'phonelink', text: 'App downloads' },
-    //   { icon: 'keyboard', text: 'Keyboard shortcuts' },
+      { heading: 'Labels' , goto: ''},
+      { icon: 'add', text: 'Create new label' , goto: ''},
+      { divider: true , goto: ''},
+      { icon: 'person', text: 'Users', goto: 'users'},
+      { icon: 'lock', text: 'Roles' , goto: 'roles'},
+      { divider: true , goto: ''},
+      { icon: 'settings', text: 'Settings' , goto: 'login'},
+      { icon: 'chat_bubble', text: 'Trash' , goto: ''},
+      { icon: 'help', text: 'Help' , goto: ''},
+      { icon: 'phonelink', text: 'App downloads' , goto: ''},
     ],
              
         }

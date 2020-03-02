@@ -26,7 +26,7 @@
     </v-app-bar> -->
   
     <router-view/>
-
+         
   </v-app>
 </template>
 

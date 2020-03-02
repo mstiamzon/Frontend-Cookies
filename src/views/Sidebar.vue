@@ -1,10 +1,7 @@
 <template>
-  
       <Dashboard></Dashboard>
-  
+   
 </template>
-
-
 
 
 <script>
