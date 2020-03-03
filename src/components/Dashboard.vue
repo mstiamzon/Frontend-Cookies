@@ -109,6 +109,7 @@ export default {
       { divider: true , goto: ''},
       { icon: 'person', text: 'Users', goto: 'users'},
       { icon: 'lock', text: 'Roles' , goto: 'roles'},
+         { icon: 'sentiment_very_satisfied', text: 'Roles' , goto: 'Products'},
       { divider: true , goto: ''},
       { icon: 'settings', text: 'Settings' , goto: 'login'},
       { icon: 'chat_bubble', text: 'Trash' , goto: ''},

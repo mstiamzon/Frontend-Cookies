@@ -6,6 +6,8 @@ import Register from '../views/SignUp.vue'
 import Sidebar from '../views/Sidebar.vue'
 import UsersView from '../views/UsersView.vue'
 import RolesView from '../views/RolesView.vue'
+import ProductsView from '../views/ProductsView.vue'
+import AboutView from '../views/AboutView.vue'
 import ErrorView from '../views/ErrorView.vue'
 
 Vue.use(VueRouter)
@@ -31,9 +33,9 @@ const routes = [
      },
       
      {
-      path:'/register',
-      name:'Register',
-       component:Register
+      path:'/products',
+      name:'products',
+       component:ProductsView
        },
     ]
   },
@@ -54,6 +56,11 @@ const routes = [
     path: '/register',
     name: 'register',
     component: Register
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: AboutView
   },
  
    //Error Route
