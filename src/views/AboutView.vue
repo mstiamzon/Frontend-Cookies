@@ -28,7 +28,7 @@
        
     <v-container>
 
-        <template>
+   
   <v-card>
     <v-tabs
       background-color="white"
@@ -62,7 +62,7 @@
       </v-tab-item>
     </v-tabs>
   </v-card>
-</template>
+
  
     <!-- <v-row>
       <v-col
