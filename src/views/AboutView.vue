@@ -28,7 +28,11 @@
        
     <v-container>
 
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> Development
   <v-card>
     <v-tabs
       background-color="white"
